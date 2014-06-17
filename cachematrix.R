@@ -1,8 +1,11 @@
 ## Put comments here that give an overall description of what your
 ## functions do
+# These functions are used to solve and cache inverse of matrix. 
+# Caching is necessary since solving inverse is a computationally 
+# expensive process.
 
 ## Write a short comment describing this function
-
+# To make a cache matrix with get and set functions
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
@@ -17,9 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
              get_inverse = get_inverse)
 }
 
-
 ## Write a short comment describing this function
-
+# To solve non-singular matrix x if the cache of its inverse does not 
+# exist. Otherwise, return its cached inverse.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         m <- x$get_inverse()
